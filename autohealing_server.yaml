@@ -39,6 +39,18 @@ parameters:
     type: number
     description: The port to reply to requests on
     default: 8080
+  security_groups:
+    type: list
+    description: List of security groups names or IDs.
+    default: [bastion]
+  name:
+    type: string
+    description: Server name.
+    default: ahstack-server
+  key:
+    type: string
+    description: Name of keypair to inject into the server.
+    default: micke
   root_stack_id:
     type: string
     default: ""
