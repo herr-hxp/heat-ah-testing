@@ -39,7 +39,7 @@ parameters:
     type: number
     description: The port to reply to requests on
     default: 8080
-  security_groups:
+  sg:
     type: list
     description: List of security groups names or IDs.
     default: [bastion]
@@ -66,6 +66,9 @@ resources:
       flavor: {get_param: flavor}
       networks:
        - network: {get_param: network}
+      key_name: {get_param: key}
+      name: {get_param: name}
+      security_groups: {get_param: sg}
       user_data_format: RAW
       user_data:
         str_replace:
