@@ -40,9 +40,9 @@ parameters:
     description: The port to reply to requests on
     default: 8080
   sg:
-    type: list
+    type: string
     description: List of security groups names or IDs.
-    default: [bastion]
+    default: bastion
   name:
     type: string
     description: Server name.
