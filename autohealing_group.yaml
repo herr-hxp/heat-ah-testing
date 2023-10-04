@@ -40,7 +40,7 @@ resources:
     type: OS::Heat::AutoScalingGroup
     properties:
       resource:
-        type: autohealing_server.yaml
+        type: https://raw.githubusercontent.com/openstack/heat-templates/master/hot/autohealing/autohealing_server.yaml
         properties:
           flavor: {get_param: flavor}
           image: {get_param: image}
